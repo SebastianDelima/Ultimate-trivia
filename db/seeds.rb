@@ -8,3 +8,5 @@
 
 history = Subject.create(title: "History")
 
+history_question1 = Question.create(name:"Who discovered electricity?", answer1:"Ben Franklin", answer2:"Jack Sparrow", answer3:"Nikola Tesla", subject_id: 1)
+history_question2 = Question.create(name:"Who was Emiliano Zapata", answer1:"A brazilian pirate", answer2:"A spanish conquistador", answer3:"A Mexican revolutionary", subject_id: 1)
