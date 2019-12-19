@@ -4,4 +4,7 @@ class GameSessionsController < ApplicationController
        render json: games
         end
 
+        def create
+            
+        end
 end
