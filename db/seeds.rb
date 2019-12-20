@@ -10,5 +10,12 @@ Question.destroy_all
 
 history = Subject.create(title: "History")
 
-history_question1 = Question.create(name:"Who discovered electricity?", answer1:"Ben Franklin", answer2:"Jack Sparrow", answer3:"Nikola Tesla", subject_id: history.id)
-history_question2 = Question.create(name:"Who was Emiliano Zapata", answer1:"A brazilian pirate", answer2:"A spanish conquistador", answer3:"A Mexican revolutionary", subject_id: history.id)
+history_question1 = Question.create(name:"Who discovered electricity?", subject_id: history.id)
+hq1_answer1 = Answer.create(answer:"Benjamin Franklin", question_id: history_question1.id, correct:true)
+hq1_answer2 = Answer.create(answer:"Nikola Tesla", question_id: history_question1.id, correct:false)
+hq1_answer3 = Answer.create(answer:"Jack Sparrow", question_id: history_question1.id, correct:false)
+
+history_question2 = Question.create(name:"Who was Emiliano Zapata?", subject_id: history.id)
+hq2_answer1 = Answer.create(answer:"A Spanish conquistador", question_id: history_question2.id, correct:false)
+hq2_answer2 = Answer.create(answer:"A Mexican revolutionary", question_id: history_question2.id, correct:true)
+hq2_answer3 = Answer.create(answer:"The owner of the Prince Maximilian Palace", question_id: history_question2.id, correct:false)
