@@ -10,8 +10,13 @@ class SubjectsController < ApplicationController
     end
 
     def serialized_data
-        {:except => [:created_at, :updated_at],
-    :include => {:questions => {:except => [:created_at, :updated_at]}}}
+     {:except => [:created_at, :updated_at],
+        :include => [
+            :questions => {:except => [:created_at, :updated_at]},
+            :answers => {:except => [:created_at, :updated_at]}
+         ]
+    }
     end
+    
 
 end

@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Subject.destroy_all
 Question.destroy_all
+Answer.destroy_all
 
 history = Subject.create(title: "History")
 
