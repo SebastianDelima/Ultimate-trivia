@@ -732,3 +732,1656 @@ Migrating to AddQuestionIdToAnswers (20191220144509)
   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ? LIMIT ?[0m  [["subject_id", 4], ["LIMIT", 11]]
   [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
   [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ? LIMIT ?[0m  [["subject_id", 4], ["LIMIT", 11]]
+Started GET "/subjects/4" for ::1 at 2019-12-20 18:09:46 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 4]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (1.0ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 4]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 73ms (Views: 0.2ms | ActiveRecord: 3.9ms | Allocations: 22953)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-20 18:09:58 -0500
+Processing by GameSessionsController#create as JSON
+  Parameters: {"score"=>1, "game_session"=>{"score"=>1}}
+Completed 200 OK in 19ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 6131)
+
+
+Started GET "/subjects/4" for ::1 at 2019-12-20 18:10:11 -0500
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 4]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 4]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 10ms (Views: 0.8ms | ActiveRecord: 1.3ms | Allocations: 3270)
+
+
+Started GET "/subjects/4" for ::1 at 2019-12-20 18:10:22 -0500
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 4]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 4]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 23ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 3273)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-20 18:10:36 -0500
+Processing by GameSessionsController#create as JSON
+  Parameters: {"score"=>2, "game_session"=>{"score"=>2}}
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 1029)
+
+
+Started GET "/subjects/4" for ::1 at 2019-12-20 19:22:58 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 4]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (0.6ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 4]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 17ms (Views: 0.5ms | ActiveRecord: 1.8ms | Allocations: 3304)
+
+
+Started GET "/subjects/4" for ::1 at 2019-12-20 19:23:05 -0500
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 4]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 4]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 3258)
+
+
+Started GET "/subjects/4" for ::1 at 2019-12-20 19:24:07 -0500
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 4]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 4]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 3256)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-20 19:29:02 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GameSessionsController#create as JSON
+  Parameters: {"name"=>"sebastian", "game_session"=>{"name"=>"sebastian"}}
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 6549)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-20 19:31:39 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GameSessionsController#create as JSON
+  Parameters: {"name"=>"sebastin", "game_session"=>{"name"=>"sebastin"}}
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 6549)
+
+
+Started GET "/subjects/4" for ::1 at 2019-12-20 19:31:42 -0500
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 4]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (0.9ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 4]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 36ms (Views: 0.1ms | ActiveRecord: 4.9ms | Allocations: 16533)
+
+
+Started PATCH "/game_sessions/2" for ::1 at 2019-12-20 19:31:47 -0500
+Processing by GameSessionsController#update as JSON
+  Parameters: {"score"=>2, "id"=>"2", "game_session"=>{"score"=>2}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2076)
+
+
+  
+NameError (uninitialized constant GameSessionsController::Session):
+  
+app/controllers/game_sessions_controller.rb:13:in `update'
+Started POST "/game_sessions" for ::1 at 2019-12-20 19:35:45 -0500
+Processing by GameSessionsController#create as JSON
+  Parameters: {"name"=>"hello", "game_session"=>{"name"=>"hello"}}
+Completed 200 OK in 22ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1064)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/game_sessions" for ::1 at 2019-12-20 19:37:30 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GameSessionsController#create as JSON
+  Parameters: {"name"=>"fff", "game_session"=>{"name"=>"fff"}}
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 6570)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-20 19:38:10 -0500
+Processing by GameSessionsController#create as JSON
+  Parameters: {"name"=>"se", "game_session"=>{"name"=>"se"}}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1015)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-20 19:38:44 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GameSessionsController#create as JSON
+  Parameters: {"name"=>"fff", "game_session"=>{"name"=>"fff"}}
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 6519)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-20 19:39:40 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GameSessionsController#create as JSON
+  Parameters: {"name"=>"xx", "game_session"=>{"name"=>"xx"}}
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 6553)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-20 20:39:22 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GameSessionsController#create as JSON
+  Parameters: {"name"=>"sebastian", "game_session"=>{"name"=>"sebastian"}}
+Completed 200 OK in 14ms (Views: 0.7ms | ActiveRecord: 0.8ms | Allocations: 6514)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-20 20:40:10 -0500
+Processing by GameSessionsController#create as JSON
+  Parameters: {"name"=>"sebastian", "game_session"=>{"name"=>"sebastian"}}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1017)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-20 20:40:18 -0500
+Processing by GameSessionsController#create as JSON
+  Parameters: {"name"=>"sebastian", "game_session"=>{"name"=>"sebastian"}}
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 1015)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-20 20:40:22 -0500
+Processing by GameSessionsController#create as JSON
+  Parameters: {"name"=>"sebastian", "game_session"=>{"name"=>"sebastian"}}
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 1015)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-20 20:41:09 -0500
+Processing by GameSessionsController#create as JSON
+  Parameters: {"name"=>"sebastian", "game_session"=>{"name"=>"sebastian"}}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1015)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-20 20:41:37 -0500
+Processing by GameSessionsController#create as JSON
+  Parameters: {"name"=>"se", "game_session"=>{"name"=>"se"}}
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 1015)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubject Destroy (0.6ms)[0m  [1m[31mDELETE FROM "subjects" WHERE "subjects"."id" = ?[0m  [["id", 4]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Destroy (0.3ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 7]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Destroy (0.3ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 8]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Destroy (0.3ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Destroy (0.3ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Destroy (0.3ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Destroy (0.3ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers"[0m
+  [1m[36mGameSession Load (0.2ms)[0m  [1m[34mSELECT "game_sessions".* FROM "game_sessions"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubject Create (1.9ms)[0m  [1m[32mINSERT INTO "subjects" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "History"], ["created_at", "2019-12-21 01:44:41.133814"], ["updated_at", "2019-12-21 01:44:41.133814"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mQuestion Create (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("name", "created_at", "updated_at", "subject_id") VALUES (?, ?, ?, ?)[0m  [["name", "Who discovered electricity?"], ["created_at", "2019-12-21 01:44:41.155436"], ["updated_at", "2019-12-21 01:44:41.155436"], ["subject_id", 5]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mAnswer Create (0.3ms)[0m  [1m[32mINSERT INTO "answers" ("answer", "correct", "created_at", "updated_at", "question_id") VALUES (?, ?, ?, ?, ?)[0m  [["answer", "Benjamin Franklin"], ["correct", 1], ["created_at", "2019-12-21 01:44:41.167345"], ["updated_at", "2019-12-21 01:44:41.167345"], ["question_id", 9]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mAnswer Create (0.3ms)[0m  [1m[32mINSERT INTO "answers" ("answer", "correct", "created_at", "updated_at", "question_id") VALUES (?, ?, ?, ?, ?)[0m  [["answer", "Nikola Tesla"], ["correct", 0], ["created_at", "2019-12-21 01:44:41.172171"], ["updated_at", "2019-12-21 01:44:41.172171"], ["question_id", 9]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mAnswer Create (0.2ms)[0m  [1m[32mINSERT INTO "answers" ("answer", "correct", "created_at", "updated_at", "question_id") VALUES (?, ?, ?, ?, ?)[0m  [["answer", "Jack Sparrow"], ["correct", 0], ["created_at", "2019-12-21 01:44:41.176826"], ["updated_at", "2019-12-21 01:44:41.176826"], ["question_id", 9]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mQuestion Create (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("name", "created_at", "updated_at", "subject_id") VALUES (?, ?, ?, ?)[0m  [["name", "Who was Emiliano Zapata?"], ["created_at", "2019-12-21 01:44:41.181437"], ["updated_at", "2019-12-21 01:44:41.181437"], ["subject_id", 5]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mAnswer Create (0.2ms)[0m  [1m[32mINSERT INTO "answers" ("answer", "correct", "created_at", "updated_at", "question_id") VALUES (?, ?, ?, ?, ?)[0m  [["answer", "A Spanish conquistador"], ["correct", 0], ["created_at", "2019-12-21 01:44:41.195706"], ["updated_at", "2019-12-21 01:44:41.195706"], ["question_id", 10]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mAnswer Create (0.2ms)[0m  [1m[32mINSERT INTO "answers" ("answer", "correct", "created_at", "updated_at", "question_id") VALUES (?, ?, ?, ?, ?)[0m  [["answer", "A Mexican revolutionary"], ["correct", 1], ["created_at", "2019-12-21 01:44:41.200454"], ["updated_at", "2019-12-21 01:44:41.200454"], ["question_id", 10]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mAnswer Create (0.2ms)[0m  [1m[32mINSERT INTO "answers" ("answer", "correct", "created_at", "updated_at", "question_id") VALUES (?, ?, ?, ?, ?)[0m  [["answer", "The owner of the Prince Maximilian Palace"], ["correct", 0], ["created_at", "2019-12-21 01:44:41.204823"], ["updated_at", "2019-12-21 01:44:41.204823"], ["question_id", 10]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubject Destroy (0.6ms)[0m  [1m[31mDELETE FROM "subjects" WHERE "subjects"."id" = ?[0m  [["id", 5]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Destroy (0.3ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 9]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Destroy (0.6ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 10]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Destroy (0.3ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Destroy (0.3ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Destroy (0.3ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Destroy (0.3ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Destroy (0.4ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Destroy (0.3ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGameSession Load (0.1ms)[0m  [1m[34mSELECT "game_sessions".* FROM "game_sessions"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubject Create (0.3ms)[0m  [1m[32mINSERT INTO "subjects" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "History"], ["created_at", "2019-12-21 01:45:12.370999"], ["updated_at", "2019-12-21 01:45:12.370999"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mQuestion Create (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("name", "created_at", "updated_at", "subject_id") VALUES (?, ?, ?, ?)[0m  [["name", "Who discovered electricity?"], ["created_at", "2019-12-21 01:45:12.393515"], ["updated_at", "2019-12-21 01:45:12.393515"], ["subject_id", 6]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mAnswer Create (0.3ms)[0m  [1m[32mINSERT INTO "answers" ("answer", "correct", "created_at", "updated_at", "question_id") VALUES (?, ?, ?, ?, ?)[0m  [["answer", "Benjamin Franklin"], ["correct", 1], ["created_at", "2019-12-21 01:45:12.400059"], ["updated_at", "2019-12-21 01:45:12.400059"], ["question_id", 11]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mAnswer Create (0.3ms)[0m  [1m[32mINSERT INTO "answers" ("answer", "correct", "created_at", "updated_at", "question_id") VALUES (?, ?, ?, ?, ?)[0m  [["answer", "Nikola Tesla"], ["correct", 0], ["created_at", "2019-12-21 01:45:12.405026"], ["updated_at", "2019-12-21 01:45:12.405026"], ["question_id", 11]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mAnswer Create (0.2ms)[0m  [1m[32mINSERT INTO "answers" ("answer", "correct", "created_at", "updated_at", "question_id") VALUES (?, ?, ?, ?, ?)[0m  [["answer", "Jack Sparrow"], ["correct", 0], ["created_at", "2019-12-21 01:45:12.410166"], ["updated_at", "2019-12-21 01:45:12.410166"], ["question_id", 11]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mQuestion Create (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("name", "created_at", "updated_at", "subject_id") VALUES (?, ?, ?, ?)[0m  [["name", "Who was Emiliano Zapata?"], ["created_at", "2019-12-21 01:45:12.416089"], ["updated_at", "2019-12-21 01:45:12.416089"], ["subject_id", 6]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mAnswer Create (0.3ms)[0m  [1m[32mINSERT INTO "answers" ("answer", "correct", "created_at", "updated_at", "question_id") VALUES (?, ?, ?, ?, ?)[0m  [["answer", "A Spanish conquistador"], ["correct", 0], ["created_at", "2019-12-21 01:45:12.421028"], ["updated_at", "2019-12-21 01:45:12.421028"], ["question_id", 12]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mAnswer Create (0.2ms)[0m  [1m[32mINSERT INTO "answers" ("answer", "correct", "created_at", "updated_at", "question_id") VALUES (?, ?, ?, ?, ?)[0m  [["answer", "A Mexican revolutionary"], ["correct", 1], ["created_at", "2019-12-21 01:45:12.425325"], ["updated_at", "2019-12-21 01:45:12.425325"], ["question_id", 12]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mAnswer Create (0.7ms)[0m  [1m[32mINSERT INTO "answers" ("answer", "correct", "created_at", "updated_at", "question_id") VALUES (?, ?, ?, ?, ?)[0m  [["answer", "The owner of the Prince Maximilian Palace"], ["correct", 0], ["created_at", "2019-12-21 01:45:12.429859"], ["updated_at", "2019-12-21 01:45:12.429859"], ["question_id", 12]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubject Destroy (0.5ms)[0m  [1m[31mDELETE FROM "subjects" WHERE "subjects"."id" = ?[0m  [["id", 6]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Destroy (0.3ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 11]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Destroy (0.3ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 12]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGameSession Load (0.1ms)[0m  [1m[34mSELECT "game_sessions".* FROM "game_sessions"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubject Create (0.3ms)[0m  [1m[32mINSERT INTO "subjects" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "History"], ["created_at", "2019-12-21 01:46:57.026983"], ["updated_at", "2019-12-21 01:46:57.026983"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mQuestion Create (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("name", "created_at", "updated_at", "subject_id") VALUES (?, ?, ?, ?)[0m  [["name", "Who discovered electricity?"], ["created_at", "2019-12-21 01:46:57.047219"], ["updated_at", "2019-12-21 01:46:57.047219"], ["subject_id", 7]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mAnswer Create (0.2ms)[0m  [1m[32mINSERT INTO "answers" ("answer", "correct", "created_at", "updated_at", "question_id") VALUES (?, ?, ?, ?, ?)[0m  [["answer", "Benjamin Franklin"], ["correct", 1], ["created_at", "2019-12-21 01:46:57.052522"], ["updated_at", "2019-12-21 01:46:57.052522"], ["question_id", 13]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mAnswer Create (0.3ms)[0m  [1m[32mINSERT INTO "answers" ("answer", "correct", "created_at", "updated_at", "question_id") VALUES (?, ?, ?, ?, ?)[0m  [["answer", "Nikola Tesla"], ["correct", 0], ["created_at", "2019-12-21 01:46:57.057715"], ["updated_at", "2019-12-21 01:46:57.057715"], ["question_id", 13]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mAnswer Create (0.3ms)[0m  [1m[32mINSERT INTO "answers" ("answer", "correct", "created_at", "updated_at", "question_id") VALUES (?, ?, ?, ?, ?)[0m  [["answer", "Jack Sparrow"], ["correct", 0], ["created_at", "2019-12-21 01:46:57.063155"], ["updated_at", "2019-12-21 01:46:57.063155"], ["question_id", 13]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mQuestion Create (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("name", "created_at", "updated_at", "subject_id") VALUES (?, ?, ?, ?)[0m  [["name", "Who was Emiliano Zapata?"], ["created_at", "2019-12-21 01:46:57.068220"], ["updated_at", "2019-12-21 01:46:57.068220"], ["subject_id", 7]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mAnswer Create (0.2ms)[0m  [1m[32mINSERT INTO "answers" ("answer", "correct", "created_at", "updated_at", "question_id") VALUES (?, ?, ?, ?, ?)[0m  [["answer", "A Spanish conquistador"], ["correct", 0], ["created_at", "2019-12-21 01:46:57.073278"], ["updated_at", "2019-12-21 01:46:57.073278"], ["question_id", 14]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mAnswer Create (0.3ms)[0m  [1m[32mINSERT INTO "answers" ("answer", "correct", "created_at", "updated_at", "question_id") VALUES (?, ?, ?, ?, ?)[0m  [["answer", "A Mexican revolutionary"], ["correct", 1], ["created_at", "2019-12-21 01:46:57.081958"], ["updated_at", "2019-12-21 01:46:57.081958"], ["question_id", 14]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mAnswer Create (0.3ms)[0m  [1m[32mINSERT INTO "answers" ("answer", "correct", "created_at", "updated_at", "question_id") VALUES (?, ?, ?, ?, ?)[0m  [["answer", "The owner of the Prince Maximilian Palace"], ["correct", 0], ["created_at", "2019-12-21 01:46:57.098669"], ["updated_at", "2019-12-21 01:46:57.098669"], ["question_id", 14]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubject Destroy (0.5ms)[0m  [1m[31mDELETE FROM "subjects" WHERE "subjects"."id" = ?[0m  [["id", 7]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Destroy (0.3ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 13]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Destroy (0.3ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 14]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Destroy (0.3ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Destroy (0.3ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Destroy (0.3ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGameSession Load (0.2ms)[0m  [1m[34mSELECT "game_sessions".* FROM "game_sessions"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubject Create (0.3ms)[0m  [1m[32mINSERT INTO "subjects" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "History"], ["created_at", "2019-12-21 01:47:33.196750"], ["updated_at", "2019-12-21 01:47:33.196750"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mQuestion Create (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("name", "created_at", "updated_at", "subject_id") VALUES (?, ?, ?, ?)[0m  [["name", "Who discovered electricity?"], ["created_at", "2019-12-21 01:47:33.210475"], ["updated_at", "2019-12-21 01:47:33.210475"], ["subject_id", 8]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mAnswer Create (0.2ms)[0m  [1m[32mINSERT INTO "answers" ("answer", "correct", "created_at", "updated_at", "question_id") VALUES (?, ?, ?, ?, ?)[0m  [["answer", "Benjamin Franklin"], ["correct", 1], ["created_at", "2019-12-21 01:47:33.224830"], ["updated_at", "2019-12-21 01:47:33.224830"], ["question_id", 15]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mAnswer Create (0.2ms)[0m  [1m[32mINSERT INTO "answers" ("answer", "correct", "created_at", "updated_at", "question_id") VALUES (?, ?, ?, ?, ?)[0m  [["answer", "Nikola Tesla"], ["correct", 0], ["created_at", "2019-12-21 01:47:33.229393"], ["updated_at", "2019-12-21 01:47:33.229393"], ["question_id", 15]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mAnswer Create (0.2ms)[0m  [1m[32mINSERT INTO "answers" ("answer", "correct", "created_at", "updated_at", "question_id") VALUES (?, ?, ?, ?, ?)[0m  [["answer", "Jack Sparrow"], ["correct", 0], ["created_at", "2019-12-21 01:47:33.233253"], ["updated_at", "2019-12-21 01:47:33.233253"], ["question_id", 15]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mQuestion Create (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("name", "created_at", "updated_at", "subject_id") VALUES (?, ?, ?, ?)[0m  [["name", "Who was Emiliano Zapata?"], ["created_at", "2019-12-21 01:47:33.240041"], ["updated_at", "2019-12-21 01:47:33.240041"], ["subject_id", 8]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mAnswer Create (0.4ms)[0m  [1m[32mINSERT INTO "answers" ("answer", "correct", "created_at", "updated_at", "question_id") VALUES (?, ?, ?, ?, ?)[0m  [["answer", "A Spanish conquistador"], ["correct", 0], ["created_at", "2019-12-21 01:47:33.255507"], ["updated_at", "2019-12-21 01:47:33.255507"], ["question_id", 16]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mAnswer Create (0.2ms)[0m  [1m[32mINSERT INTO "answers" ("answer", "correct", "created_at", "updated_at", "question_id") VALUES (?, ?, ?, ?, ?)[0m  [["answer", "A Mexican revolutionary"], ["correct", 1], ["created_at", "2019-12-21 01:47:33.260514"], ["updated_at", "2019-12-21 01:47:33.260514"], ["question_id", 16]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mAnswer Create (0.3ms)[0m  [1m[32mINSERT INTO "answers" ("answer", "correct", "created_at", "updated_at", "question_id") VALUES (?, ?, ?, ?, ?)[0m  [["answer", "The owner of the Prince Maximilian Palace"], ["correct", 0], ["created_at", "2019-12-21 01:47:33.265661"], ["updated_at", "2019-12-21 01:47:33.265661"], ["question_id", 16]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddQuestionIdToAnswers (20191220144509)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aanswers" ("id" integer NOT NULL PRIMARY KEY, "answer" varchar DEFAULT NULL, "correct" boolean DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "question_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aanswers" ("id","answer","correct","created_at","updated_at","question_id")
+                     SELECT "id","answer","correct","created_at","updated_at","question_id" FROM "answers"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "answers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "answers" ("id" integer NOT NULL PRIMARY KEY, "answer" varchar DEFAULT NULL, "correct" boolean DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "answers" ("id","answer","correct","created_at","updated_at")
+                     SELECT "id","answer","correct","created_at","updated_at" FROM "aanswers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aanswers"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20191220144509"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateSubjects (20191219200604)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "subjects" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191219200604"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateQuestions (20191219205504)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "questions" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191219205504"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateGameSessions (20191219205748)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "game_sessions" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "score" integer, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191219205748"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddPartNumberToProductsSubjectKeyToQuestions (20191219210542)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "questions" ADD "subject_id" integer[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191219210542"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddSubjectKeyToGameSessions (20191219210652)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "game_sessions" ADD "subject_id" integer[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191219210652"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateAnswers (20191220143802)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "answers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "answer" varchar, "correct" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191220143802"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddQuestionIdToAnswers (20191220144509)
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "answers" ADD "question_id" integer[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191220144509"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-12-21 01:50:47.584765"], ["updated_at", "2019-12-21 01:50:47.584765"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers"[0m
+  [1m[36mGameSession Load (0.2ms)[0m  [1m[34mSELECT "game_sessions".* FROM "game_sessions"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubject Create (0.4ms)[0m  [1m[32mINSERT INTO "subjects" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "History"], ["created_at", "2019-12-21 01:50:55.346842"], ["updated_at", "2019-12-21 01:50:55.346842"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mQuestion Create (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("name", "created_at", "updated_at", "subject_id") VALUES (?, ?, ?, ?)[0m  [["name", "Who discovered electricity?"], ["created_at", "2019-12-21 01:50:55.368269"], ["updated_at", "2019-12-21 01:50:55.368269"], ["subject_id", 1]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAnswer Create (0.5ms)[0m  [1m[32mINSERT INTO "answers" ("answer", "correct", "created_at", "updated_at", "question_id") VALUES (?, ?, ?, ?, ?)[0m  [["answer", "Benjamin Franklin"], ["correct", 1], ["created_at", "2019-12-21 01:50:55.383527"], ["updated_at", "2019-12-21 01:50:55.383527"], ["question_id", 1]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAnswer Create (0.5ms)[0m  [1m[32mINSERT INTO "answers" ("answer", "correct", "created_at", "updated_at", "question_id") VALUES (?, ?, ?, ?, ?)[0m  [["answer", "Nikola Tesla"], ["correct", 0], ["created_at", "2019-12-21 01:50:55.391742"], ["updated_at", "2019-12-21 01:50:55.391742"], ["question_id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAnswer Create (0.5ms)[0m  [1m[32mINSERT INTO "answers" ("answer", "correct", "created_at", "updated_at", "question_id") VALUES (?, ?, ?, ?, ?)[0m  [["answer", "Jack Sparrow"], ["correct", 0], ["created_at", "2019-12-21 01:50:55.399980"], ["updated_at", "2019-12-21 01:50:55.399980"], ["question_id", 1]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mQuestion Create (0.5ms)[0m  [1m[32mINSERT INTO "questions" ("name", "created_at", "updated_at", "subject_id") VALUES (?, ?, ?, ?)[0m  [["name", "Who was Emiliano Zapata?"], ["created_at", "2019-12-21 01:50:55.408752"], ["updated_at", "2019-12-21 01:50:55.408752"], ["subject_id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAnswer Create (0.4ms)[0m  [1m[32mINSERT INTO "answers" ("answer", "correct", "created_at", "updated_at", "question_id") VALUES (?, ?, ?, ?, ?)[0m  [["answer", "A Spanish conquistador"], ["correct", 0], ["created_at", "2019-12-21 01:50:55.428941"], ["updated_at", "2019-12-21 01:50:55.428941"], ["question_id", 2]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAnswer Create (0.3ms)[0m  [1m[32mINSERT INTO "answers" ("answer", "correct", "created_at", "updated_at", "question_id") VALUES (?, ?, ?, ?, ?)[0m  [["answer", "A Mexican revolutionary"], ["correct", 1], ["created_at", "2019-12-21 01:50:55.434366"], ["updated_at", "2019-12-21 01:50:55.434366"], ["question_id", 2]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAnswer Create (0.3ms)[0m  [1m[32mINSERT INTO "answers" ("answer", "correct", "created_at", "updated_at", "question_id") VALUES (?, ?, ?, ?, ?)[0m  [["answer", "The owner of the Prince Maximilian Palace"], ["correct", 0], ["created_at", "2019-12-21 01:50:55.439111"], ["updated_at", "2019-12-21 01:50:55.439111"], ["question_id", 2]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubject Destroy (0.4ms)[0m  [1m[31mDELETE FROM "subjects" WHERE "subjects"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Destroy (0.3ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Destroy (0.2ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAnswer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "answers" WHERE "answers"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGameSession Load (0.1ms)[0m  [1m[34mSELECT "game_sessions".* FROM "game_sessions"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubject Create (0.3ms)[0m  [1m[32mINSERT INTO "subjects" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "History"], ["created_at", "2019-12-21 01:51:59.186287"], ["updated_at", "2019-12-21 01:51:59.186287"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mQuestion Create (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("name", "created_at", "updated_at", "subject_id") VALUES (?, ?, ?, ?)[0m  [["name", "Who discovered electricity?"], ["created_at", "2019-12-21 01:51:59.209765"], ["updated_at", "2019-12-21 01:51:59.209765"], ["subject_id", 2]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAnswer Create (0.2ms)[0m  [1m[32mINSERT INTO "answers" ("answer", "correct", "created_at", "updated_at", "question_id") VALUES (?, ?, ?, ?, ?)[0m  [["answer", "Benjamin Franklin"], ["correct", 1], ["created_at", "2019-12-21 01:51:59.214948"], ["updated_at", "2019-12-21 01:51:59.214948"], ["question_id", 3]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAnswer Create (0.2ms)[0m  [1m[32mINSERT INTO "answers" ("answer", "correct", "created_at", "updated_at", "question_id") VALUES (?, ?, ?, ?, ?)[0m  [["answer", "Nikola Tesla"], ["correct", 0], ["created_at", "2019-12-21 01:51:59.219255"], ["updated_at", "2019-12-21 01:51:59.219255"], ["question_id", 3]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAnswer Create (0.2ms)[0m  [1m[32mINSERT INTO "answers" ("answer", "correct", "created_at", "updated_at", "question_id") VALUES (?, ?, ?, ?, ?)[0m  [["answer", "Jack Sparrow"], ["correct", 0], ["created_at", "2019-12-21 01:51:59.223601"], ["updated_at", "2019-12-21 01:51:59.223601"], ["question_id", 3]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mQuestion Create (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("name", "created_at", "updated_at", "subject_id") VALUES (?, ?, ?, ?)[0m  [["name", "Who was Emiliano Zapata?"], ["created_at", "2019-12-21 01:51:59.227857"], ["updated_at", "2019-12-21 01:51:59.227857"], ["subject_id", 2]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mAnswer Create (0.3ms)[0m  [1m[32mINSERT INTO "answers" ("answer", "correct", "created_at", "updated_at", "question_id") VALUES (?, ?, ?, ?, ?)[0m  [["answer", "A Spanish conquistador"], ["correct", 0], ["created_at", "2019-12-21 01:51:59.236020"], ["updated_at", "2019-12-21 01:51:59.236020"], ["question_id", 4]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mAnswer Create (0.3ms)[0m  [1m[32mINSERT INTO "answers" ("answer", "correct", "created_at", "updated_at", "question_id") VALUES (?, ?, ?, ?, ?)[0m  [["answer", "A Mexican revolutionary"], ["correct", 1], ["created_at", "2019-12-21 01:51:59.251797"], ["updated_at", "2019-12-21 01:51:59.251797"], ["question_id", 4]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mAnswer Create (0.3ms)[0m  [1m[32mINSERT INTO "answers" ("answer", "correct", "created_at", "updated_at", "question_id") VALUES (?, ?, ?, ?, ?)[0m  [["answer", "The owner of the Prince Maximilian Palace"], ["correct", 0], ["created_at", "2019-12-21 01:51:59.256344"], ["updated_at", "2019-12-21 01:51:59.256344"], ["question_id", 4]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGameSession Create (0.3ms)[0m  [1m[32mINSERT INTO "game_sessions" ("score", "name", "created_at", "updated_at", "subject_id") VALUES (?, ?, ?, ?, ?)[0m  [["score", 2], ["name", "hello"], ["created_at", "2019-12-21 01:51:59.264713"], ["updated_at", "2019-12-21 01:51:59.264713"], ["subject_id", 2]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Started POST "/game_sessions" for ::1 at 2019-12-20 20:55:32 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GameSessionsController#create as JSON
+  Parameters: {"name"=>"sebastian", "game_session"=>{"name"=>"sebastian"}}
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 6429)
+
+
+Started GET "/subjects/4" for ::1 at 2019-12-20 20:55:34 -0500
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+Completed 404 Not Found in 5ms (ActiveRecord: 1.0ms | Allocations: 1491)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Subject with 'id'=4):
+  
+app/controllers/subjects_controller.rb:8:in `show'
+Started GET "/subjects/4" for ::1 at 2019-12-20 20:56:04 -0500
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms | Allocations: 968)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Subject with 'id'=4):
+  
+app/controllers/subjects_controller.rb:8:in `show'
+Started GET "/subjects/2" for ::1 at 2019-12-20 20:56:43 -0500
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 40ms (Views: 0.1ms | ActiveRecord: 1.5ms | Allocations: 17686)
+
+
+Started GET "/subjects/2" for ::1 at 2019-12-20 21:04:01 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 3286)
+
+
+Started GET "/subjects/2" for ::1 at 2019-12-20 21:05:04 -0500
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 3240)
+
+
+Started GET "/subjects/2" for ::1 at 2019-12-20 21:07:14 -0500
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 3240)
+
+
+Started GET "/subjects/2" for ::1 at 2019-12-20 21:07:26 -0500
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 3240)
+
+
+Started GET "/subjects/2" for ::1 at 2019-12-20 21:10:03 -0500
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 3240)
+
+
+Started GET "/subjects/2" for ::1 at 2019-12-20 21:10:57 -0500
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 3240)
+
+
+Started GET "/subjects/2" for ::1 at 2019-12-20 21:11:15 -0500
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 3240)
+
+
+Started GET "/subjects/2" for ::1 at 2019-12-20 21:11:32 -0500
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 3240)
+
+
+Started GET "/subjects/2" for ::1 at 2019-12-20 21:11:47 -0500
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 3240)
+
+
+Started GET "/subjects/2" for ::1 at 2019-12-20 21:13:10 -0500
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 3240)
+
+
+Started GET "/subjects/2" for ::1 at 2019-12-20 21:13:38 -0500
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 3240)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-20 21:13:40 -0500
+Processing by GameSessionsController#create as JSON
+  Parameters: {"score"=>1, "name"=>"seba", "subject_id"=>2, "game_session"=>{"score"=>1, "name"=>"seba", "subject_id"=>2}}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1019)
+
+
+Started GET "/subjects/2" for ::1 at 2019-12-20 21:14:20 -0500
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 3240)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-20 21:14:22 -0500
+Processing by GameSessionsController#create as JSON
+  Parameters: {"score"=>1, "name"=>"seba", "subject_id"=>2, "game_session"=>{"score"=>1, "name"=>"seba", "subject_id"=>2}}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1019)
+
+
+Started GET "/subjects/2" for ::1 at 2019-12-20 21:17:40 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 24ms (Views: 0.1ms | ActiveRecord: 1.7ms | Allocations: 17905)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-20 21:17:43 -0500
+  
+SyntaxError (/Users/sebastiandelima/Development/code/mod3/week2/project/Ultimate-trivia/app/controllers/game_sessions_controller.rb:8: syntax error, unexpected ',', expecting =>
+...ame]), session_id(params[:id]), score:(params[:score]))
+...                              ^
+/Users/sebastiandelima/Development/code/mod3/week2/project/Ultimate-trivia/app/controllers/game_sessions_controller.rb:8: syntax error, unexpected ')', expecting end
+...[:id]), score:(params[:score]))
+...                              ^):
+  
+app/controllers/game_sessions_controller.rb:8: syntax error, unexpected ',', expecting =>
+app/controllers/game_sessions_controller.rb:8: syntax error, unexpected ')', expecting end
+app/controllers/game_sessions_controller.rb:8: syntax error, unexpected ',', expecting =>
+app/controllers/game_sessions_controller.rb:8: syntax error, unexpected ')', expecting end
+app/controllers/game_sessions_controller.rb:8: syntax error, unexpected ',', expecting =>
+app/controllers/game_sessions_controller.rb:8: syntax error, unexpected ')', expecting end
+Started GET "/subjects/2" for ::1 at 2019-12-20 21:18:48 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 18ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 17906)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-20 21:18:50 -0500
+  
+SyntaxError (/Users/sebastiandelima/Development/code/mod3/week2/project/Ultimate-trivia/app/controllers/game_sessions_controller.rb:8: syntax error, unexpected ',', expecting =>
+...ame]), session_id(params[:id]), score:(params[:score]))
+...                              ^
+/Users/sebastiandelima/Development/code/mod3/week2/project/Ultimate-trivia/app/controllers/game_sessions_controller.rb:8: syntax error, unexpected ')', expecting end
+...[:id]), score:(params[:score]))
+...                              ^):
+  
+app/controllers/game_sessions_controller.rb:8: syntax error, unexpected ',', expecting =>
+app/controllers/game_sessions_controller.rb:8: syntax error, unexpected ')', expecting end
+app/controllers/game_sessions_controller.rb:8: syntax error, unexpected ',', expecting =>
+app/controllers/game_sessions_controller.rb:8: syntax error, unexpected ')', expecting end
+app/controllers/game_sessions_controller.rb:8: syntax error, unexpected ',', expecting =>
+app/controllers/game_sessions_controller.rb:8: syntax error, unexpected ')', expecting end
+Started GET "/subjects/2" for ::1 at 2019-12-20 21:19:20 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 18ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 17906)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-20 21:19:22 -0500
+  
+SyntaxError (/Users/sebastiandelima/Development/code/mod3/week2/project/Ultimate-trivia/app/controllers/game_sessions_controller.rb:9: syntax error, unexpected ',', expecting =>
+...ame]), session_id(params[:id]), score:(params[:score]))
+...                              ^
+/Users/sebastiandelima/Development/code/mod3/week2/project/Ultimate-trivia/app/controllers/game_sessions_controller.rb:9: syntax error, unexpected ')', expecting end
+...[:id]), score:(params[:score]))
+...                              ^):
+  
+app/controllers/game_sessions_controller.rb:9: syntax error, unexpected ',', expecting =>
+app/controllers/game_sessions_controller.rb:9: syntax error, unexpected ')', expecting end
+app/controllers/game_sessions_controller.rb:9: syntax error, unexpected ',', expecting =>
+app/controllers/game_sessions_controller.rb:9: syntax error, unexpected ')', expecting end
+app/controllers/game_sessions_controller.rb:9: syntax error, unexpected ',', expecting =>
+app/controllers/game_sessions_controller.rb:9: syntax error, unexpected ')', expecting end
+Started GET "/subjects/2" for ::1 at 2019-12-20 21:20:01 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 25ms (Views: 0.1ms | ActiveRecord: 1.9ms | Allocations: 17905)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-20 21:20:03 -0500
+Processing by GameSessionsController#create as JSON
+  Parameters: {"score"=>1, "name"=>"seba", "subject_id"=>2, "game_session"=>{"score"=>1, "name"=>"seba", "subject_id"=>2}}
+Started GET "/subjects/2" for ::1 at 2019-12-20 21:21:30 -0500
+Completed 500 Internal Server Error in 87182ms (ActiveRecord: 0.3ms | Allocations: 376772)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/game_sessions_controller.rb:9:in `create'
+Started GET "/subjects/2" for ::1 at 2019-12-20 21:21:30 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SubjectsController#show as */*
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (5.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mSubject Load (1.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  [1m[36mQuestion Load (4.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (1.0ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  [1m[36mAnswer Load (5.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 504ms (Views: 0.9ms | ActiveRecord: 25.3ms | Allocations: 5141728)
+
+
+Completed 200 OK in 438ms (Views: 1.1ms | ActiveRecord: 11.0ms | Allocations: 4491514)
+
+
+Started GET "/subjects/2" for ::1 at 2019-12-20 21:21:45 -0500
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (1.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (0.8ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 110ms (Views: 1.0ms | ActiveRecord: 2.6ms | Allocations: 1238687)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-20 21:21:48 -0500
+Processing by GameSessionsController#create as JSON
+  Parameters: {"score"=>1, "name"=>"seba", "subject_id"=>2, "game_session"=>{"score"=>1, "name"=>"seba", "subject_id"=>2}}
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 4.1ms | Allocations: 803311)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'session_id' for GameSession.):
+  
+app/controllers/game_sessions_controller.rb:8:in `create'
+Started GET "/subjects/2" for ::1 at 2019-12-20 21:23:12 -0500
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (1.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (1.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 492ms (Views: 1.1ms | ActiveRecord: 33.8ms | Allocations: 5118051)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-20 21:23:19 -0500
+Processing by GameSessionsController#create as JSON
+  Parameters: {"score"=>1, "name"=>"seba", "subject_id"=>2, "game_session"=>{"score"=>1, "name"=>"seba", "subject_id"=>2}}
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mSubject Load (4.9ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mGameSession Create (1.2ms)[0m  [1m[32mINSERT INTO "game_sessions" ("score", "name", "created_at", "updated_at", "subject_id") VALUES (?, ?, ?, ?, ?)[0m  [["score", 1], ["name", "seba"], ["created_at", "2019-12-21 02:23:20.182925"], ["updated_at", "2019-12-21 02:23:20.182925"], ["subject_id", 2]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+Completed 200 OK in 191ms (Views: 9.2ms | ActiveRecord: 18.3ms | Allocations: 1956902)
+
+
+Started GET "/subjects/2" for ::1 at 2019-12-20 21:23:35 -0500
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (1.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (4.4ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 135ms (Views: 5.3ms | ActiveRecord: 6.4ms | Allocations: 1436403)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-20 21:23:38 -0500
+Processing by GameSessionsController#create as JSON
+  Parameters: {"score"=>1, "name"=>"alex", "subject_id"=>2, "game_session"=>{"score"=>1, "name"=>"alex", "subject_id"=>2}}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mSubject Load (1.5ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mGameSession Create (1.4ms)[0m  [1m[32mINSERT INTO "game_sessions" ("score", "name", "created_at", "updated_at", "subject_id") VALUES (?, ?, ?, ?, ?)[0m  [["score", 1], ["name", "alex"], ["created_at", "2019-12-21 02:23:38.442112"], ["updated_at", "2019-12-21 02:23:38.442112"], ["subject_id", 2]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+Completed 200 OK in 130ms (Views: 12.0ms | ActiveRecord: 5.8ms | Allocations: 1248384)
+
+
+Started GET "/subjects/2" for ::1 at 2019-12-21 18:22:56 -0600
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (1.3ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (5.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (1.6ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 160ms (Views: 1.6ms | ActiveRecord: 8.1ms | Allocations: 1448308)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-21 18:23:05 -0600
+Processing by GameSessionsController#create as JSON
+  Parameters: {"score"=>2, "subject_id"=>2, "game_session"=>{"score"=>2, "subject_id"=>2}}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mSubject Load (4.9ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mGameSession Create (5.6ms)[0m  [1m[32mINSERT INTO "game_sessions" ("score", "created_at", "updated_at", "subject_id") VALUES (?, ?, ?, ?)[0m  [["score", 2], ["created_at", "2019-12-22 00:23:05.371711"], ["updated_at", "2019-12-22 00:23:05.371711"], ["subject_id", 2]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+Completed 200 OK in 127ms (Views: 7.3ms | ActiveRecord: 12.3ms | Allocations: 1234265)
+
+
+Started GET "/subjects/2" for ::1 at 2019-12-21 18:24:17 -0600
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (1.5ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (4.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (4.4ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 142ms (Views: 1.3ms | ActiveRecord: 10.0ms | Allocations: 1438822)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-21 18:24:19 -0600
+Processing by GameSessionsController#create as JSON
+  Parameters: {"score"=>1, "name"=>"emilia", "subject_id"=>2, "game_session"=>{"score"=>1, "name"=>"emilia", "subject_id"=>2}}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mSubject Load (1.3ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mGameSession Create (1.3ms)[0m  [1m[32mINSERT INTO "game_sessions" ("score", "name", "created_at", "updated_at", "subject_id") VALUES (?, ?, ?, ?, ?)[0m  [["score", 1], ["name", "emilia"], ["created_at", "2019-12-22 00:24:19.515315"], ["updated_at", "2019-12-22 00:24:19.515315"], ["subject_id", 2]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+Completed 200 OK in 122ms (Views: 7.3ms | ActiveRecord: 8.0ms | Allocations: 1248384)
+
+
+Started GET "/subjects/2" for ::1 at 2019-12-21 18:26:52 -0600
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (4.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 132ms (Views: 4.2ms | ActiveRecord: 5.8ms | Allocations: 1436405)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-21 18:26:56 -0600
+Processing by GameSessionsController#create as JSON
+  Parameters: {"score"=>1, "name"=>"a", "subject_id"=>2, "game_session"=>{"score"=>1, "name"=>"a", "subject_id"=>2}}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mSubject Load (1.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mGameSession Create (4.6ms)[0m  [1m[32mINSERT INTO "game_sessions" ("score", "name", "created_at", "updated_at", "subject_id") VALUES (?, ?, ?, ?, ?)[0m  [["score", 1], ["name", "a"], ["created_at", "2019-12-22 00:26:56.266130"], ["updated_at", "2019-12-22 00:26:56.266130"], ["subject_id", 2]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+Completed 200 OK in 126ms (Views: 10.5ms | ActiveRecord: 7.7ms | Allocations: 1248384)
+
+
+Started GET "/subjects/2" for ::1 at 2019-12-21 18:27:55 -0600
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (4.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (1.0ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 136ms (Views: 1.3ms | ActiveRecord: 5.9ms | Allocations: 1436403)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-21 18:27:57 -0600
+Processing by GameSessionsController#create as JSON
+  Parameters: {"score"=>1, "name"=>"carlod", "subject_id"=>2, "game_session"=>{"score"=>1, "name"=>"carlod", "subject_id"=>2}}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mSubject Load (1.3ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mGameSession Create (1.2ms)[0m  [1m[32mINSERT INTO "game_sessions" ("score", "name", "created_at", "updated_at", "subject_id") VALUES (?, ?, ?, ?, ?)[0m  [["score", 1], ["name", "carlod"], ["created_at", "2019-12-22 00:27:57.444868"], ["updated_at", "2019-12-22 00:27:57.444868"], ["subject_id", 2]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+Completed 200 OK in 127ms (Views: 11.9ms | ActiveRecord: 4.9ms | Allocations: 1248384)
+
+
+Started GET "/subjects/2" for ::1 at 2019-12-21 18:30:26 -0600
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (1.0ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 140ms (Views: 1.1ms | ActiveRecord: 2.8ms | Allocations: 1436403)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-21 18:30:29 -0600
+Processing by GameSessionsController#create as JSON
+  Parameters: {"score"=>1, "name"=>"sebastini", "subject_id"=>2, "game_session"=>{"score"=>1, "name"=>"sebastini", "subject_id"=>2}}
+  [1m[35m (4.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mSubject Load (1.8ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mGameSession Create (1.2ms)[0m  [1m[32mINSERT INTO "game_sessions" ("score", "name", "created_at", "updated_at", "subject_id") VALUES (?, ?, ?, ?, ?)[0m  [["score", 1], ["name", "sebastini"], ["created_at", "2019-12-22 00:30:29.378222"], ["updated_at", "2019-12-22 00:30:29.378222"], ["subject_id", 2]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+Completed 200 OK in 132ms (Views: 7.8ms | ActiveRecord: 8.8ms | Allocations: 1248384)
+
+
+Started GET "/subjects/2" for ::1 at 2019-12-21 18:32:39 -0600
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (1.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (4.0ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 139ms (Views: 1.1ms | ActiveRecord: 6.0ms | Allocations: 1436407)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-21 18:32:44 -0600
+Processing by GameSessionsController#create as JSON
+  Parameters: {"score"=>1, "name"=>"j", "subject_id"=>2, "game_session"=>{"score"=>1, "name"=>"j", "subject_id"=>2}}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mSubject Load (1.4ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mGameSession Create (4.7ms)[0m  [1m[32mINSERT INTO "game_sessions" ("score", "name", "created_at", "updated_at", "subject_id") VALUES (?, ?, ?, ?, ?)[0m  [["score", 1], ["name", "j"], ["created_at", "2019-12-22 00:32:44.643512"], ["updated_at", "2019-12-22 00:32:44.643512"], ["subject_id", 2]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+Completed 200 OK in 129ms (Views: 7.3ms | ActiveRecord: 8.7ms | Allocations: 1248384)
+
+
+Started GET "/subjects/2" for ::1 at 2019-12-21 18:34:55 -0600
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (4.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (0.9ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 138ms (Views: 1.1ms | ActiveRecord: 5.9ms | Allocations: 1436405)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-21 18:34:58 -0600
+Processing by GameSessionsController#create as JSON
+  Parameters: {"score"=>1, "name"=>"hellow", "subject_id"=>2, "game_session"=>{"score"=>1, "name"=>"hellow", "subject_id"=>2}}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mSubject Load (1.3ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mGameSession Create (1.2ms)[0m  [1m[32mINSERT INTO "game_sessions" ("score", "name", "created_at", "updated_at", "subject_id") VALUES (?, ?, ?, ?, ?)[0m  [["score", 1], ["name", "hellow"], ["created_at", "2019-12-22 00:34:58.835396"], ["updated_at", "2019-12-22 00:34:58.835396"], ["subject_id", 2]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+Completed 200 OK in 132ms (Views: 7.4ms | ActiveRecord: 4.8ms | Allocations: 1248384)
+
+
+Started GET "/subjects/2" for ::1 at 2019-12-21 18:39:02 -0600
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (1.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (1.0ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 142ms (Views: 4.6ms | ActiveRecord: 3.0ms | Allocations: 1436406)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-21 18:39:14 -0600
+Processing by GameSessionsController#create as JSON
+  Parameters: {"game_session"=>{}}
+Completed 200 OK in 48ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 543296)
+
+
+Started GET "/subjects/2" for ::1 at 2019-12-21 18:42:34 -0600
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (0.9ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 116ms (Views: 1.1ms | ActiveRecord: 2.7ms | Allocations: 1437893)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-21 18:44:48 -0600
+Processing by GameSessionsController#create as JSON
+  Parameters: {"game_session"=>{}}
+Completed 200 OK in 43ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 489568)
+
+
+Started GET "/subjects/2" for ::1 at 2019-12-21 18:46:10 -0600
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (0.9ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 114ms (Views: 1.1ms | ActiveRecord: 2.6ms | Allocations: 1437893)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-21 18:46:13 -0600
+Processing by GameSessionsController#create as JSON
+  Parameters: {"score"=>1, "name"=>"emily", "subject_id"=>2, "game_session"=>{"score"=>1, "name"=>"emily", "subject_id"=>2}}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mGameSession Create (1.2ms)[0m  [1m[32mINSERT INTO "game_sessions" ("score", "name", "created_at", "updated_at", "subject_id") VALUES (?, ?, ?, ?, ?)[0m  [["score", 1], ["name", "emily"], ["created_at", "2019-12-22 00:46:13.704086"], ["updated_at", "2019-12-22 00:46:13.704086"], ["subject_id", 2]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+Completed 200 OK in 106ms (Views: 3.8ms | ActiveRecord: 4.4ms | Allocations: 1248380)
+
+
+Started GET "/subjects/2" for ::1 at 2019-12-21 18:48:36 -0600
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (4.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (1.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 117ms (Views: 1.1ms | ActiveRecord: 6.5ms | Allocations: 1436403)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-21 18:48:38 -0600
+Processing by GameSessionsController#create as JSON
+  Parameters: {"score"=>1, "name"=>"carlos", "subject_id"=>2, "game_session"=>{"score"=>1, "name"=>"carlos", "subject_id"=>2}}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mSubject Load (4.4ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mGameSession Create (1.1ms)[0m  [1m[32mINSERT INTO "game_sessions" ("score", "name", "created_at", "updated_at", "subject_id") VALUES (?, ?, ?, ?, ?)[0m  [["score", 1], ["name", "carlos"], ["created_at", "2019-12-22 00:48:38.761260"], ["updated_at", "2019-12-22 00:48:38.761260"], ["subject_id", 2]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+Completed 200 OK in 110ms (Views: 8.3ms | ActiveRecord: 8.3ms | Allocations: 1249208)
+
+
+Started GET "/subjects/2" for ::1 at 2019-12-21 18:49:02 -0600
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (4.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (0.9ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 117ms (Views: 1.1ms | ActiveRecord: 6.7ms | Allocations: 1436403)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-21 18:49:04 -0600
+Processing by GameSessionsController#create as JSON
+  Parameters: {"score"=>1, "name"=>"r", "subject_id"=>2, "game_session"=>{"score"=>1, "name"=>"r", "subject_id"=>2}}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mSubject Load (1.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mGameSession Create (5.4ms)[0m  [1m[32mINSERT INTO "game_sessions" ("score", "name", "created_at", "updated_at", "subject_id") VALUES (?, ?, ?, ?, ?)[0m  [["score", 1], ["name", "r"], ["created_at", "2019-12-22 00:49:04.830207"], ["updated_at", "2019-12-22 00:49:04.830207"], ["subject_id", 2]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+Completed 200 OK in 103ms (Views: 7.3ms | ActiveRecord: 8.5ms | Allocations: 1249199)
+
+
+Started GET "/subjects/2" for ::1 at 2019-12-21 18:49:31 -0600
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (0.9ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 115ms (Views: 1.4ms | ActiveRecord: 2.6ms | Allocations: 1436407)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-21 18:49:34 -0600
+Processing by GameSessionsController#create as JSON
+  Parameters: {"score"=>1, "name"=>"eee", "subject_id"=>2, "game_session"=>{"score"=>1, "name"=>"eee", "subject_id"=>2}}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mSubject Load (1.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mGameSession Create (4.9ms)[0m  [1m[32mINSERT INTO "game_sessions" ("score", "name", "created_at", "updated_at", "subject_id") VALUES (?, ?, ?, ?, ?)[0m  [["score", 1], ["name", "eee"], ["created_at", "2019-12-22 00:49:34.303273"], ["updated_at", "2019-12-22 00:49:34.303273"], ["subject_id", 2]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+Completed 200 OK in 105ms (Views: 7.2ms | ActiveRecord: 8.5ms | Allocations: 1248382)
+
+
+Started GET "/subjects/2" for ::1 at 2019-12-21 18:50:37 -0600
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (0.9ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 117ms (Views: 4.5ms | ActiveRecord: 2.6ms | Allocations: 1438822)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-21 18:50:39 -0600
+Processing by GameSessionsController#create as JSON
+  Parameters: {"score"=>1, "name"=>"eerrere", "subject_id"=>2, "game_session"=>{"score"=>1, "name"=>"eerrere", "subject_id"=>2}}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mSubject Load (1.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mGameSession Create (4.7ms)[0m  [1m[32mINSERT INTO "game_sessions" ("score", "name", "created_at", "updated_at", "subject_id") VALUES (?, ?, ?, ?, ?)[0m  [["score", 1], ["name", "eerrere"], ["created_at", "2019-12-22 00:50:39.470847"], ["updated_at", "2019-12-22 00:50:39.470847"], ["subject_id", 2]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+Completed 200 OK in 105ms (Views: 7.5ms | ActiveRecord: 7.8ms | Allocations: 1248384)
+
+
+Started GET "/subjects/2" for ::1 at 2019-12-21 18:51:33 -0600
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (4.5ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 123ms (Views: 1.2ms | ActiveRecord: 6.2ms | Allocations: 1436405)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-21 18:51:40 -0600
+Processing by GameSessionsController#create as JSON
+  Parameters: {"score"=>2, "subject_id"=>2, "game_session"=>{"score"=>2, "subject_id"=>2}}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mSubject Load (1.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mGameSession Create (1.1ms)[0m  [1m[32mINSERT INTO "game_sessions" ("score", "created_at", "updated_at", "subject_id") VALUES (?, ?, ?, ?)[0m  [["score", 2], ["created_at", "2019-12-22 00:51:40.759692"], ["updated_at", "2019-12-22 00:51:40.759692"], ["subject_id", 2]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+Completed 200 OK in 105ms (Views: 3.8ms | ActiveRecord: 4.5ms | Allocations: 1234260)
+
+
+Started GET "/subjects/2" for ::1 at 2019-12-21 19:02:24 -0600
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (1.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (1.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (1.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 118ms (Views: 4.7ms | ActiveRecord: 3.4ms | Allocations: 1448306)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-21 19:02:31 -0600
+Processing by GameSessionsController#create as JSON
+  Parameters: {"score"=>2, "subject_id"=>2, "game_session"=>{"score"=>2, "subject_id"=>2}}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mSubject Load (0.8ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mGameSession Create (1.2ms)[0m  [1m[32mINSERT INTO "game_sessions" ("score", "created_at", "updated_at", "subject_id") VALUES (?, ?, ?, ?)[0m  [["score", 2], ["created_at", "2019-12-22 01:02:31.925767"], ["updated_at", "2019-12-22 01:02:31.925767"], ["subject_id", 2]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+Completed 200 OK in 107ms (Views: 7.4ms | ActiveRecord: 4.0ms | Allocations: 1234263)
+
+
+Started GET "/subjects/2" for ::1 at 2019-12-21 19:02:48 -0600
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (1.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 119ms (Views: 1.2ms | ActiveRecord: 2.8ms | Allocations: 1436403)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-21 19:02:51 -0600
+Processing by GameSessionsController#create as JSON
+  Parameters: {"score"=>1, "subject_id"=>2, "game_session"=>{"score"=>1, "subject_id"=>2}}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mSubject Load (1.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mGameSession Create (4.7ms)[0m  [1m[32mINSERT INTO "game_sessions" ("score", "created_at", "updated_at", "subject_id") VALUES (?, ?, ?, ?)[0m  [["score", 1], ["created_at", "2019-12-22 01:02:51.350360"], ["updated_at", "2019-12-22 01:02:51.350360"], ["subject_id", 2]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+Completed 200 OK in 104ms (Views: 7.2ms | ActiveRecord: 8.4ms | Allocations: 1234264)
+
+
+Started GET "/subjects/2" for ::1 at 2019-12-21 19:40:53 -0600
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (4.9ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (4.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (1.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 123ms (Views: 1.2ms | ActiveRecord: 10.8ms | Allocations: 1448302)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-21 19:40:55 -0600
+Processing by GameSessionsController#create as JSON
+  Parameters: {"score"=>1, "name"=>"seba", "subject_id"=>2, "game_session"=>{"score"=>1, "name"=>"seba", "subject_id"=>2}}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mSubject Load (1.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mGameSession Create (1.3ms)[0m  [1m[32mINSERT INTO "game_sessions" ("score", "name", "created_at", "updated_at", "subject_id") VALUES (?, ?, ?, ?, ?)[0m  [["score", 1], ["name", "seba"], ["created_at", "2019-12-22 01:40:55.623496"], ["updated_at", "2019-12-22 01:40:55.623496"], ["subject_id", 2]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+Completed 200 OK in 112ms (Views: 7.5ms | ActiveRecord: 5.4ms | Allocations: 1248383)
+
+
+Started GET "/subjects/2" for ::1 at 2019-12-21 19:42:22 -0600
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (1.6ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (0.9ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 126ms (Views: 1.1ms | ActiveRecord: 3.4ms | Allocations: 1436407)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-21 19:42:26 -0600
+Processing by GameSessionsController#create as JSON
+  Parameters: {"score"=>1, "name"=>"carlosss", "subject_id"=>2, "game_session"=>{"score"=>1, "name"=>"carlosss", "subject_id"=>2}}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mSubject Load (1.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mGameSession Create (1.2ms)[0m  [1m[32mINSERT INTO "game_sessions" ("score", "name", "created_at", "updated_at", "subject_id") VALUES (?, ?, ?, ?, ?)[0m  [["score", 1], ["name", "carlosss"], ["created_at", "2019-12-22 01:42:26.541370"], ["updated_at", "2019-12-22 01:42:26.541370"], ["subject_id", 2]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+Completed 200 OK in 112ms (Views: 7.9ms | ActiveRecord: 4.8ms | Allocations: 1250797)
+
+
+Started GET "/subjects/2" for ::1 at 2019-12-21 19:43:04 -0600
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (1.0ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 124ms (Views: 1.1ms | ActiveRecord: 2.7ms | Allocations: 1436409)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-21 19:43:06 -0600
+Processing by GameSessionsController#create as JSON
+  Parameters: {"score"=>1, "name"=>"iu", "subject_id"=>2, "game_session"=>{"score"=>1, "name"=>"iu", "subject_id"=>2}}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mSubject Load (1.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mGameSession Create (1.2ms)[0m  [1m[32mINSERT INTO "game_sessions" ("score", "name", "created_at", "updated_at", "subject_id") VALUES (?, ?, ?, ?, ?)[0m  [["score", 1], ["name", "iu"], ["created_at", "2019-12-22 01:43:06.843324"], ["updated_at", "2019-12-22 01:43:06.843324"], ["subject_id", 2]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+Completed 200 OK in 111ms (Views: 7.7ms | ActiveRecord: 4.6ms | Allocations: 1248382)
+
+
+Started GET "/subjects/2" for ::1 at 2019-12-21 19:45:52 -0600
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (1.0ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 127ms (Views: 4.8ms | ActiveRecord: 2.7ms | Allocations: 1436409)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-21 19:45:54 -0600
+Processing by GameSessionsController#create as JSON
+  Parameters: {"score"=>1, "name"=>"seba", "subject_id"=>2, "game_session"=>{"score"=>1, "name"=>"seba", "subject_id"=>2}}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mSubject Load (1.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mGameSession Create (1.1ms)[0m  [1m[32mINSERT INTO "game_sessions" ("score", "name", "created_at", "updated_at", "subject_id") VALUES (?, ?, ?, ?, ?)[0m  [["score", 1], ["name", "seba"], ["created_at", "2019-12-22 01:45:54.420501"], ["updated_at", "2019-12-22 01:45:54.420501"], ["subject_id", 2]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+Completed 200 OK in 111ms (Views: 4.0ms | ActiveRecord: 4.7ms | Allocations: 1248384)
+
+
+Started GET "/subjects/2" for ::1 at 2019-12-21 19:58:11 -0600
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SubjectsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (1.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subjects_controller.rb:8:in `show'
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+  [1m[36mAnswer Load (1.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" INNER JOIN "questions" ON "answers"."question_id" = "questions"."id" WHERE "questions"."subject_id" = ?[0m  [["subject_id", 2]]
+  ↳ app/controllers/subjects_controller.rb:9:in `show'
+Completed 200 OK in 124ms (Views: 1.2ms | ActiveRecord: 3.2ms | Allocations: 1448304)
+
+
+Started POST "/game_sessions" for ::1 at 2019-12-21 19:58:14 -0600
+Processing by GameSessionsController#create as JSON
+  Parameters: {"score"=>1, "name"=>"jose", "subject_id"=>2, "game_session"=>{"score"=>1, "name"=>"jose", "subject_id"=>2}}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mSubject Load (1.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[36mGameSession Create (1.2ms)[0m  [1m[32mINSERT INTO "game_sessions" ("score", "name", "created_at", "updated_at", "subject_id") VALUES (?, ?, ?, ?, ?)[0m  [["score", 1], ["name", "jose"], ["created_at", "2019-12-22 01:58:14.432151"], ["updated_at", "2019-12-22 01:58:14.432151"], ["subject_id", 2]]
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/game_sessions_controller.rb:8:in `create'
+Completed 200 OK in 115ms (Views: 4.1ms | ActiveRecord: 5.0ms | Allocations: 1248385)
+
+

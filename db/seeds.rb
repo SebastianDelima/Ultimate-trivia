@@ -8,6 +8,7 @@
 Subject.destroy_all
 Question.destroy_all
 Answer.destroy_all
+GameSession.destroy_all
 
 history = Subject.create(title: "History")
 
@@ -20,3 +21,6 @@ history_question2 = Question.create(name:"Who was Emiliano Zapata?", subject_id:
 hq2_answer1 = Answer.create(answer:"A Spanish conquistador", question_id: history_question2.id, correct:false)
 hq2_answer2 = Answer.create(answer:"A Mexican revolutionary", question_id: history_question2.id, correct:true)
 hq2_answer3 = Answer.create(answer:"The owner of the Prince Maximilian Palace", question_id: history_question2.id, correct:false)
+
+first = GameSession.create(name:"hello", subject_id: history.id, score:2)
+# riddle1

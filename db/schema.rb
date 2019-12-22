@@ -33,7 +33,6 @@ ActiveRecord::Schema.define(version: 2019_12_20_144509) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "subject_id"
-    t.boolean "correct"
   end
 
   create_table "subjects", force: :cascade do |t|
